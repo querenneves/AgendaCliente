@@ -1,0 +1,195 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 11pt;
+}
+
+head {
+
+height: 20px;
+}
+
+
+
+body {
+	background-color: #ccc;
+	width: 100%;
+	height: auto;
+	margin: auto;
+	margin-top: 2px;
+	padding: 10px;
+
+}
+
+
+
+
+div {
+	background-color: #fff;
+	margin-top: 10px;
+	width: 100%;
+	height: auto;
+	font-size: 15pt;
+	margin-left: 2px;
+}
+
+section {
+	background-color: #ddd;
+	margin-top: 10px;
+	margin-left: 10px;
+	width: 700px;
+	height: auto;
+	float: left;
+	font-size: 12pt;
+   }
+
+aside {
+	background-color: #ddd;
+	width: 380px;
+	margin-top: 10px;
+	height: auto;
+	float: right;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 12pt;
+	margin-bottom: 10px;
+}
+
+
+
+footer {
+	margin-top: 10px;
+	background-color: #fff;
+	width: 100%;
+	float: left;
+	height: 120px;
+	text-align: center;
+	clear: both;
+	font-size: 12pt;
+	justify-content: space-between;
+}
+
+
+.container {
+	background-color: #fff;
+	width: 2000;
+	height: auto;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+}
+
+figure {
+	width: 100%;
+	height: auto;
+	text-align: center;
+	border: 1px solid #ccc;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+img {
+	width: 30%;
+	height: auto;
+
+}
+
+.titulo {
+font-size: 15pt;
+
+}
+
+li {
+	font-size: 15pt;
+	margin-left: 10px;
+    margin-height: 10px;
+}
+
+form {
+	background-color: #ddd;
+	width: 100%;
+	height: auto;
+	font-family: Arial;
+	font-size: 12pt;
+	margin-left: 2px;
+	margin-right: auto;
+}
+
+h1 {
+	font-family: Arial;
+	font-size: 22pt;
+	text-align: center;
+}
+
+h2 {
+	background-color: #ddd;
+	font-family: Arial;
+	font-size: 15pt;
+	margin-left: 10px;
+	margin-right: auto;
+}
+
+h3 {
+	font-family: Arial;
+	font-size: 20pt;
+	margin-left: 10px;
+	font-family: Arial Rounded MT Bold;
+	margin-right: auto;
+}
+
+h4 {
+	font-size: 20pt;
+	font-family: Century Schoolbook;
+	text-align: center;
+}
+
+h6 {
+    font-size: 15pt;
+}
+a {
+	margin-left: 10px;
+	font-size: 12pt;
+	margin-right: 10px;
+
+}
+
+
+.pgto {
+	width: 400px;
+	height: 80px;
+	margin: auto;
+	background-color: #fff;
+	margin-top: 10px;
+	margin-left: 2px;
+	font-size: 12pt;
+	float: right;
+	margin-bottom: 10px;
+	justify-content: space-between;
+	display: flex
+	}
+
+title {
+font-size: 15pt;
+}
+
+span {
+margin-left: 5px;
+font-size: 10pt;
+
+}
+
+input {
+font-size: 11px;
+}
+textarea {
+font-size: 11px;
+}
+
+p {
+margin-left: 2px;
+font-size: 18px;
+
+}

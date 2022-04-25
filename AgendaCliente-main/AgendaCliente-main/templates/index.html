@@ -1,0 +1,102 @@
+{% extends 'base.html'%}
+{% block content %}
+
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<head>
+    <meta charset="UTF-8">
+      <title>agenda</title>
+</head>
+
+<body>
+
+<link rel="stylesheet" href="static/css/estilo.css">
+    <div class="container">
+         <figure>
+               <figcaption>
+                        <h1>DHEL Cabeleireiros unissex</h1>
+                    </figcaption>
+         <img id="baixados" src="../static/imagens/baixados.jpg" class="titulo" title="Cabeleireiros">
+         <img id="unha" src="../static/imagens/unha.jpg" class="titulo" title="Manicure">
+         <img id="sobc" src="../static/imagens/sobc.jpg" class="titulo" title="Design de Sobrancelhas">
+        </figure>
+    </div>
+
+
+    <section>
+
+              <figcaption>
+                        <h6>Clientes Agendados</h6>
+                    </figcaption>
+    {% for post in posts %}
+        <a href="{{ url_for('post', post_id=post['id'])}}">
+            <h2>{{ post['title'] }}</h2>
+        </a>
+        <span class="badge badge-primary">{{ post['created'] }}</span>
+        <a href="{{ url_for('edit', id=post['id']) }}">
+            <span class="badge badge-warning">Editar</span>
+        </a>
+        <hr>
+    {% endfor %}
+        </section>
+
+
+        <aside>
+
+            <div class="container">
+                <figure>
+                    <figcaption>
+                        <h6>Modelos Masculinos</h6>
+                    </figcaption>
+                    <img id="c_soc" src="../static/imagens/c_soc.jpg" class="titulo" title="Degradê">
+                    <img id="moic" src="../static/imagens/moic.jpg" class="titulo" title="Moicano">
+                    <img id="twister" src="../static/imagens/twister.jpg"class="titulo" title="Twister" >
+                    <img id="c_inf" src="../static/imagens/c_inf.jpg" class="titulo" title="Degradê infantil">
+                    <img id="moic_afro" src="../static/imagens/moic_afro.jpg"class="titulo" title="Moicano Afro" >
+                    <img id="Twister_afro" src="../static/imagens/twister_afro.jpg" class="titulo" title="Twister Afro">
+                    <img id="c_masc" src="../static/imagens/c_masc.jpg" class="titulo" title="Social">
+                    <img id="deg_afro" src="../static/imagens/deg_afro.jpg" class="titulo" title="Degradê Afro">
+                    <img id="deg_b" src="../static/imagens/deg_b.jpg" class="titulo" title="Blindado">
+
+                </figure>
+            </div>
+            <div class="container">
+                <figure>
+                    <figcaption>
+                        <h6>Modelos Femininos</h6>
+                    </figcaption>
+                    <img id="soc_f" src="../static/imagens/soc_f.jpg" class="titulo" title="Social">
+                    <img id="chanel" src="../static/imagens/chanel.jpg"class="titulo" title="Chanel" >
+                    <img id="rep" src="../static/imagens/rep.jpg" class="titulo" title="Repicado">
+
+
+                </figure>
+            </div>
+
+             <div class="container">
+                    <figure>
+                        <figcaption>
+                            <h6>Pague com cartão</h6>
+                        </figcaption>
+                        <img id="cartao" src="../static/imagens/cartao.jpg">
+                        <img id="cartao1" src="../static/imagens/cartao1.jpg">
+                        <img id="cartao3" src="../static/imagens/cartao3.jpg">
+
+
+                    </figure>
+         </div>
+
+
+        </aside>
+
+
+ <footer>
+
+
+            <strong>Endereço:</strong><br><br>Rua Santa Cruz do monte Castelo, 12 B - Jardim Paraná - São Paulo<br>Tel.
+            98546-3550 / 98332-1977<br>
+     &copy; Copyright 2021 HTML.am
+ </footer>
+</body>
+{% endblock %}
+

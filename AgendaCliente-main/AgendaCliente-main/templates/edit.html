@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script language=javascript>
+senha = '2870';
+senhadig = prompt("Digite a senha","")
+if (senha != senhadig){
+alert('Acesso negado!');
+top.location.href='erro.htm';
+}
+</script>
+
+<h1>{% block title %} Editar "{{ post['title'] }}" {% endblock %}</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" placeholder="Post title"
+               class="form-control"
+               value="{{ request.form['title'] or post['title'] }}">
+        </input>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="text" name="email" placeholder="Post email"
+               class="form-control"
+               value="{{ request.form['email'] or post['email'] }}">
+        </input>
+    </div>
+
+     <div class="form-group">
+        <label for="telefone">Telefone</label>
+        <input type="text" name="telefone" placeholder="Post telefone"
+               class="form-control"
+               value="{{ request.form['telefone'] or post['telefone'] }}">
+        </input>
+    </div>
+
+    <div class="form-group">
+        <label for="sexo">Sexo</label>
+        <input type="text" name="sexo" placeholder="Post sexo"
+               class="form-control"
+               value="{{ request.form['sexo'] or post['sexo'] }}">
+        </input>
+    </div>
+
+    <div class="form-group">
+        <label for="servico">Serviço</label>
+        <input type="text" name="servico" placeholder="Post servico"
+               class="form-control"
+               value="{{ request.form['servico'] or post['servico'] }}">
+        </input>
+    </div>
+
+     <div class="form-group">
+        <label for="data">Data</label>
+        <input type="text" name="data" placeholder="Post data"
+               class="form-control"
+               value="{{ request.form['data'] or post['data'] }}">
+        </input>
+    </div>
+
+    <div class="form-group">
+        <label for="horario">Horário</label>
+        <input type="text" name="horario" placeholder="Post horario"
+               class="form-control"
+               value="{{ request.form['horario'] or post['horario'] }}">
+        </input>
+    </div>
+
+    <div class="form-group">
+        <label for="content">Descrição</label>
+        <textarea name="content" placeholder="Post content"
+                  class="form-control">{{ request.form['content'] or post['content'] }}</textarea>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+</form>
+<hr>
+
+<form action="{{ url_for('delete', id=post['id']) }}" method="POST">
+    <input type="submit" value="Apagar"
+            class="btn btn-danger btn-sm"
+            onclick="return confirm('Tem certeza que deseja apagar essa postagem?')">
+</form>
+
+{% endblock %}
